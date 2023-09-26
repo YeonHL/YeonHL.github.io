@@ -16,11 +16,11 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Settings
 locale: "ko-KR"
-title: "Dev Blog"
+title: "YeonHL's Blog"
 title_separator: "-"
-subtitle: # site tagline that appears below site title in masthead
+subtitle: "Dev Blog"
 name: "YeonHo Yi"
-description: "An amazing website."
+description: "Developer Blog"
 url: "https://YeonHL.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: "YeonHL/YeonHL.github.io"
@@ -105,7 +105,7 @@ analytics:
 author:
   name: "YeonHo Yi"
   avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: "소프트웨어 개발자"
+  bio: "Software Developer"
   location: "Seoul"
   email:
   links:
