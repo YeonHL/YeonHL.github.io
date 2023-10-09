@@ -6,8 +6,7 @@ categories:
   - Java Language
 tags:
   - Variable
-  - Identifier
-  - Naming Rule
+
 last_modified_at: 2023-10-10T00:23:00-05:00
 ---
 ## Identifier

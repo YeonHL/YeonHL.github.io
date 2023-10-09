@@ -6,8 +6,7 @@ categories:
   - Java Language
 tags:
   - Variable
-  - Constant
-  - Literal
+
 last_modified_at: 2023-10-10T00:23:00-05:00
 ---
 - 실제 값을 저장하는 타입이다.
