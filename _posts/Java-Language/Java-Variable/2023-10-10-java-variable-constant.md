@@ -5,7 +5,7 @@ excerpt: "Java의 변수와 상수에 대해 설명한다."
 categories:
   - Java Language
 tags:
-  - Variable
+  - Java Variable
 
 last_modified_at: 2023-10-10T00:23:00-05:00
 ---
