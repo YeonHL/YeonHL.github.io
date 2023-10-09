@@ -1,5 +1,5 @@
 ---
-title:  "[Java] Naming Rule"
+title:  "[Java] 변수명 규칙 (Naming Rule)"
 excerpt: "Java의 변수명 규칙을 설명한다."
 
 categories:

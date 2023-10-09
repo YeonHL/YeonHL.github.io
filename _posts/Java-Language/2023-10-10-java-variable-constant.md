@@ -1,5 +1,5 @@
 ---
-title:  "[Java] Variable & Constant"
+title:  "[Java] 변수와 상수 (Variable & Constant)"
 excerpt: "Java의 변수와 상수에 대해 설명한다."
 
 categories:

@@ -1,6 +1,6 @@
 ---
-title:  "[Java] Primitive Type"
-excerpt: "Java의 Primitive Type에 대해 설명한다."
+title:  "[Java] 데이터 타입 (Primitive Type)"
+excerpt: "Java의 데이터 타입에 대해 설명한다."
 
 categories:
   - Java Language

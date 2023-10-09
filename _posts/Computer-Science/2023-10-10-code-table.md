@@ -1,6 +1,6 @@
 ---
-title:  "[CS] Code Table"
-excerpt: "Computer의 Code Table에 대해 설명한다."
+title:  "[CS] 코드 테이블 (Code Table)"
+excerpt: "컴퓨터의 코드 테이블에 대해 설명한다."
 
 categories:
   - Computer Science
@@ -43,3 +43,8 @@ last_modified_at: 2023-10-10T00:23:00-05:00
 - UTF-8은 문서의 크기가 작지만 문자 크기가 가변적이라 다루기 어렵다는 단점이 있다.
 - UTF-16은 모든 문자를 2 byte로 표현하여 문서 크기가 커지는 단점이 있다.
 - 전송 속도가 중요하므로 문서 크기가 작은 UTF-8이 더 많이 사용되고 있다.
+
+<br>
+
+**출처**
+- 자바의 정석 3판
