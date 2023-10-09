@@ -9,7 +9,7 @@ tags:
 
 last_modified_at: 2023-10-10T00:23:00-05:00
 ---
-## 1. Variable
+## 1. 변수 (Variable)
 ```java
 // 변수 선언
 <type> <name>;
@@ -23,7 +23,7 @@ last_modified_at: 2023-10-10T00:23:00-05:00
 
 <br>
 
-## 2. Constant
+## 2. 상수 (Constant)
 ```java
 # 상수 선언
 final <type> <name> = <value>;
