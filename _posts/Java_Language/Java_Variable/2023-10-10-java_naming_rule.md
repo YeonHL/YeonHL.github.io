@@ -9,7 +9,7 @@ tags:
 
 last_modified_at: 2023-10-10T00:23:00-05:00
 ---
-## Identifier
+## 1. Identifier
 
 - 변수명과 같이 프로그래밍에서 사용되는 모든 이름
 - 같은 영역 내에서 서로 식별할 수 있어야 한다.
@@ -18,7 +18,7 @@ last_modified_at: 2023-10-10T00:23:00-05:00
 
 <br>
 
-## Naming Rule
+## 2. Naming Rule
 
 1. 대소문자가 구분되며 길이 제한은 없다.
 2. 예약어를 사용해서는 안된다. ex) `final`, `if`

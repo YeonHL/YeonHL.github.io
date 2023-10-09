@@ -15,9 +15,9 @@ last_modified_at: 2023-10-10T00:23:00-05:00
 
 <br>
 
-## 논리형
+## 1. 논리형
 
-### boolean
+### 1) boolean
 ```java
 boolean bitFlag = true
 ```
@@ -27,9 +27,9 @@ boolean bitFlag = true
 
 <br>
 
-## 문자형
+## 2. 문자형
 
-### char
+### 1) char
 ```java
 char ch = 'J';
 ```
@@ -55,7 +55,7 @@ char ch = 'J';
 
 <br>
 
-### String
+### 2) String
 ```java
 String myString = new String("Hello, World!");
 String name = "Java";
@@ -76,9 +76,9 @@ String mixed = "abc" + 123 // mixed에 "abc123" 할당
 
 <br>
 
-## 정수형
+## 3. 정수형
 
-### byte, short, int, long
+### 1) byte, short, int, long
 ```java
 byte byteNum = 1;
 short shortNum = 2;
@@ -112,9 +112,9 @@ long big = 100_000_000_000L;
 
 <br>
 
-## 실수형
+## 4. 실수형
 
-### float, double
+### 1) float, double
 ```java
 float pi = 3.14f;
 double rate = 1.618d;
@@ -151,7 +151,7 @@ int hex1 = 0x12p3 // 144를 의미, 18*8
 
 <br>
 
-## 타입 별 byte
+## 5. 타입 별 byte
 
 |        | 1 byte  | 2 byte | 4 byte | 8 byte |
 | ------ | ------- | ------ | ------ | ------ |
@@ -178,7 +178,7 @@ int i2 = 123L; // 나타낼 수 있는 범위더라도 long 타입이므로 불�
 
 <br>
 
-> ## Reference Type (참조형)
+> ## 6. Reference Type (참조형)
 >
 > - 값이 저장된 주소를 값으로 저장한다.
 > - C언어와 달리 참조형 변수 간 연산이 불가능하다.
