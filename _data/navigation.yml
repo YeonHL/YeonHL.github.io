@@ -54,6 +54,8 @@ sidebar:
     children:
       - title: "Ubuntu"
         url: ubuntu/
+      - title: "Ubuntu Server"
+        url: ubuntu-server/
       - title: "Raspbian"
         url: raspbian/
   - title: "Software Engineering"
