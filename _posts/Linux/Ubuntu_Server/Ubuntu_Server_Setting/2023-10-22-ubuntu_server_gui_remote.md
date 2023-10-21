@@ -11,7 +11,7 @@ last_modified_at: 2023-10-22T02:40:00-05:00
 ---
 ## 1. 데스크톱 환경 설치
 - 원격 접속한 client에게 GUI 환경을 제공하기 위해서는 Desktop 환경을 설치해야 한다.
-- Server PC에 GUI 환경을 구축하면서 설치했다면 해당 환경을 사용할 수 있다.
+- Server PC에 [GUI 환경을 구축](https://yeonhl.github.io/ubuntu%20server/ubuntu_server_gui/)하면서 설치했다면 해당 환경을 사용할 수 있다.
 - Xfce, Gnome 등 원하는 환경을 1가지 설치하면 된다. Xfce가 상대적으로 더 가벼워서 권장된다고 한다.
 
 ```bash

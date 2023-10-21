@@ -12,7 +12,7 @@ last_modified_at: 2023-10-22T02:45:00-05:00
 > Ubuntu Server PC를 직접 사용하는 경우가 많고 GUI 환경이 편리할 경우 이를 구현할 수 있다.
 
 ## 1. 데스크톱 환경 설치
-- GUI Remote 환경 구축에 사용한 데스크톱 환경을 그대로 사용할 수 있다.
+- [GUI Remote 환경 구축](https://yeonhl.github.io/ubuntu%20server/ubuntu_server_gui_remote/)에 사용한 데스크톱 환경을 그대로 사용할 수 있다.
 - 직접 설치하기를 원할 경우 아래와 같이 설치할 수 있다.
 
 ```bash
