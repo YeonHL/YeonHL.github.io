@@ -7,7 +7,7 @@ categories:
 tags:
   - Ubuntu Server Setting
 
-last_modified_at: 2023-10-11T00:16:00-05:00
+last_modified_at: 2023-10-22T02:10:00-05:00
 ---
 ## 1. 암호화 Volume 생성
 - 루트 사용자 권한에서 진행한다. (`sudo su`)

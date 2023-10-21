@@ -7,7 +7,7 @@ categories:
 tags:
   - Ubuntu Server Setting
 
-last_modified_at: 2023-10-11T00:16:00-05:00
+last_modified_at: 2023-10-22T02:40:00-05:00
 ---
 ## 1. 데스크톱 환경 설치
 - 원격 접속한 client에게 GUI 환경을 제공하기 위해서는 Desktop 환경을 설치해야 한다.

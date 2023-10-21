@@ -7,7 +7,7 @@ categories:
 tags:
   - Ubuntu Server Setting
 
-last_modified_at: 2023-10-11T00:16:00-05:00
+last_modified_at: 2023-10-21T23:45:00-05:00
 ---
 ## 1. 설치 준비
 - [Ubuntu 22.04.3 LTS](https://releases.ubuntu.com/jammy/) 버전의 Ubuntu Server 기준으로 진행한다.
