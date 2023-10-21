@@ -1,6 +1,6 @@
 ---
 title:  "[Ubuntu Server] 설치 (Installation)"
-excerpt: "Ubuntu Server 설치에 대해 설명한다. Ubuntu Server 22.04 LTS 버전으로 진행한다. 폐쇄망 네트워크에서 구축한다."
+excerpt: "폐쇄망 네트워크에서 Ubuntu Server 22.04 LTS 설치를 진행한다."
 
 categories:
   - Ubuntu Server
