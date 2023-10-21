@@ -30,6 +30,11 @@ body {
           flex-direction: column;
 }
 
+.img_post {
+  display: block;
+  margin: 0 auto;
+}
+
 .initial-content,
 .search-content {
   flex: 1 0 auto;
