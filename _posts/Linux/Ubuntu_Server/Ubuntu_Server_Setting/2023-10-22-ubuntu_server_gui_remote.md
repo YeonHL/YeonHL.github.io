@@ -23,7 +23,11 @@ sudo apt install xubuntu-desktop
 sudo apt install ubuntu-desktop
 ```
 
-- 이후 원격 접속 패키지를 설치한다. `xrdp` 패키지를 사용하여 진행한다.
+<br>
+
+## 2. 원격 접속 패키지 설치
+
+- GUI 원격 접속 환경 제공을 위해선 패키지를 설치해야 한다. `xrdp` 패키지를 사용하여 진행한다.
 - 충돌을 방지하기 위해서 기존 원격 접속 패키지를 삭제 후 진행할 수 있다.
 
 ```bash
