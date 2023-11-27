@@ -80,3 +80,8 @@ sidebar:
         url: obsidian/
       - title: "Postman"
         url: postman/
+  - title: "Algorithm Problem"
+    children:
+      - title: "Baekjoon"
+        url: baekjoon/
+
