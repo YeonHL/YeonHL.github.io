@@ -26,6 +26,13 @@ sidebar:
   - title: "Data"
   - title: "Design"
   - title: "Development Log"
+    children:
+      - title: "Face Recognition (Android)"
+        url: face-recognition-android/
+      - title: "Face Recognition (Python)"
+        url: face-recognition-python/
+      - title: "Travel App (Android)"
+        url: travel-app-android/
   - title: "Go"
     children:
       - title: "Go Language"
@@ -84,4 +91,3 @@ sidebar:
     children:
       - title: "Baekjoon"
         url: baekjoon/
-
