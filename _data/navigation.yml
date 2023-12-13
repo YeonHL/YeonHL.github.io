@@ -14,56 +14,63 @@ main:
   #   url: /sitemap/
 sidebar:
   - title: "Android"
-    url: android/
+    children:
+      - title: "[Android] Compose"
+        url: android-compose/
+      - title: "[Android] Jetpack"
+        url: android-jetpack/
   - title: "Dart"
     children:
-      - title: "Dart Language"
+      - title: "[Dart] Language"
         url: dart-language/
-      - title: "Dart Library"
+      - title: "[Dart] Library"
         url: dart-library/
       - title: "Flutter"
         url: flutter/
   - title: "Data"
   - title: "Design"
+    children:
+      - title: "Figma"
+        url: figma/
   - title: "Development Log"
     children:
-      - title: "Face Recognition (Android)"
+      - title: "[Android] Face Recognition (2023)"
         url: face-recognition-android/
-      - title: "Face Recognition (Python)"
+      - title: "[Python] Face Recognition (2023)"
         url: face-recognition-python/
-      - title: "Travel App (Android)"
+      - title: "[Android] Travel App (2023 ~ )"
         url: travel-app-android/
   - title: "Go"
     children:
-      - title: "Go Language"
+      - title: "[Go] Language"
         url: go-language/
-      - title: "Go Library"
+      - title: "[Go] Library"
         url: go-library/
   - title: "Java"
     children:
-      - title: "Java Language"
+      - title: "[Java] Language"
         url: java-language/
-      - title: "Java Library"
+      - title: "[Java] Library"
         url: java-library/
   - title: "Kotlin"
     children:
-      - title: "Kotlin Language"
+      - title: "[Kotlin] Language"
         url: kotlin-language/
-      - title: "Kotlin Library"
+      - title: "[Kotlin] Library"
         url: kotlin-library/
   - title: "Python"
     children:
-      - title: "Python Language"
+      - title: "[Python] Language"
         url: python-language/
-      - title: "Python Library"
+      - title: "[Python] Library"
         url: python-library/
   - title: "Linux"
     children:
-      - title: "Ubuntu"
+      - title: "[Linux] Ubuntu"
         url: ubuntu/
-      - title: "Ubuntu Server"
+      - title: "[Linux] Ubuntu Server"
         url: ubuntu-server/
-      - title: "Raspbian"
+      - title: "[Linux] Raspbian"
         url: raspbian/
   - title: "Software Engineering"
     children:
@@ -75,8 +82,6 @@ sidebar:
         url: design-pattern
   - title: "Tools"
     children:
-      - title: "Figma"
-        url: figma/
       - title: "Git"
         url: git/
       - title: "IDE"
