@@ -17,8 +17,8 @@ sidebar:
     children:
       - title: "[Android] Compose"
         url: android-compose/
-      - title: "[Android] Jetpack"
-        url: android-jetpack/
+      - title: "[Android] OpenCV"
+        url: android-opencv/
   - title: "Dart"
     children:
       - title: "[Dart] Language"
