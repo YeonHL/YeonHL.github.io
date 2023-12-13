@@ -3,7 +3,7 @@ title: [Android] Compose TextField 생성
 excerpt: Compose의 TextField Component 생성
 
 categories:
-  - Android Face Recognition (2023)
+  - Android Face Recognition 2023
 tags:
   - Android Kotlin
 
