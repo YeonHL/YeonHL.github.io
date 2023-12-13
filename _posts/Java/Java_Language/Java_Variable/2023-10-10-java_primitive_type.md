@@ -3,12 +3,13 @@ title:  "[Java] 데이터 타입 (Primitive Type)"
 excerpt: "Java의 데이터 타입에 대해 설명한다."
 
 categories:
-  - Java Language
+  - [Java] Language
 tags:
-  - Java Variable
+  - [Java] Variable
 
 last_modified_at: 2023-10-10T00:23:00-05:00
 ---
+
 - 실제 값을 저장하는 타입이다.
 - boolean 외에는 다른 타입과 연산이 가능하다. 문자형인 char는 Unicode로 저장하므로 연산이 가능하다.
 - 접미사의 경우 소문자와 대문자를 구분하지 않는다. 정수형과 실수형에서는 접미사를 사용한다.
@@ -18,6 +19,7 @@ last_modified_at: 2023-10-10T00:23:00-05:00
 ## 1. 논리형
 
 ### 1) boolean
+
 ```java
 boolean bitFlag = true
 ```
@@ -30,9 +32,11 @@ boolean bitFlag = true
 ## 2. 문자형
 
 ### 1) char
+
 ```java
 char ch = 'J';
 ```
+
 - 문자를 저장할 때 사용, unicode로 저장한다.
 - 작은따옴표 `''`로 나타낸다. 변수 당 하나의 문자만 저장 가능하다.
 - Unicode 출력을 원할 경우 `(int)`로 Casting(형변환)하여 출력할 수 있다.
@@ -56,11 +60,13 @@ char ch = 'J';
 <br>
 
 ### 2) String
+
 ```java
 String myString = new String("Hello, World!");
 String name = "Java";
 String blank = "";
 ```
+
 - 두 글자 이상은 '문자열 리터럴'로 `""`로 나타낸다.
 - 문자열 리터럴을 `String`이라 하며 Class를 통해 구현하여 `new`를 사용해야 하지만 편의를 위해 바로 할당하는 방법도 허용된다.
 - String은 공백을 허용하지만 문자 리터럴은 반드시 문자를 포함해야 한다.
@@ -71,6 +77,7 @@ String blank = "";
 String name = "Ja" + "va"; // name에 "Java" 할당
 String mixed = "abc" + 123 // mixed에 "abc123" 할당
 ```
+
 - 덧셈 연산자를 이용하여 문자열을 결합할 수 있다.
 - 하나라도 String이 포함된 덧셈이라면 **나머지 변수도 String으로 변환**하여 덧셈을 진행한다.
 
@@ -79,12 +86,14 @@ String mixed = "abc" + 123 // mixed에 "abc123" 할당
 ## 3. 정수형
 
 ### 1) byte, short, int, long
+
 ```java
 byte byteNum = 1;
 short shortNum = 2;
 int intNum = 4;
 long longNum = 8;
 ```
+
 - 정수 값을 저장할 때 사용한다.
 - **Overflow가 발생하면 최대값 혹은 최소값**으로 돌아간다.
 - byte와 short가 메모리를 절약할 수는 있지만 저장 가능 범위가 작아서 초과할 가능성이 크고, JVM은 피연산자를 4 byte 단위로 저장하므로 **int 사용을 권장**한다.
@@ -100,6 +109,7 @@ int octNum = 010; // 8진수, 0을 붙인다. 8
 int hexNum = 0x10; // 16진수, 0x를 붙인다. 16
 int binNum = 0b10; // 2진수, 0b을 붙인다. 2
 ```
+
 - 10진수 외에 2,8,16진수는 **접두사를 사용**하여 표현한다.
 
 <br>
@@ -107,6 +117,7 @@ int binNum = 0b10; // 2진수, 0b을 붙인다. 2
 ```java
 long big = 100_000_000_000L;
 ```
+
 - JDK 1.7부터는 **정수형 리터럴의 중간에 `_`를 사용하여 큰 숫자의 자리수를 구분**하여 나타낼 수 있다.
 - **long 타입의 경우 접미사 `L`**를 붙인다.
 
@@ -115,6 +126,7 @@ long big = 100_000_000_000L;
 ## 4. 실수형
 
 ### 1) float, double
+
 ```java
 float pi = 3.14f;
 double rate = 1.618d;
@@ -134,6 +146,7 @@ double rate = 1.618d;
 float f = 3.14e3f; // 3140.0f를 의미
 double d = 1e-3 // 0.001을 의미
 ```
+
 - 10의 제곱은 접미사 `e`를 사용하여 표현할 수 있다.
 
 <br>
@@ -141,6 +154,7 @@ double d = 1e-3 // 0.001을 의미
 ```java
 int hex1 = 0x12p3 // 144를 의미, 18*8
 ```
+
 - 16진수에서 2의 제곱은 접미사 `p`를 사용하여 표현할 수 있다. 자주 사용되진 않는다.
 
 > float는 부호 1비트, 지수 8비트, 가수 23비트로 이루어지며 double은 부호 1비트, 지수 11비트, 가수 52비트로 이루어진다.
@@ -173,6 +187,7 @@ short s = 0x1234; // 저장 가능한 범위의 int 할당
 
 int i2 = 123L; // 나타낼 수 있는 범위더라도 long 타입이므로 불가능
 ```
+
 - 저장 범위가 넓은 타입에 좁은 타입을 갖는 변수를 할당하는 것은 허용되지만 넓은 타입을 가진 변수를 좁은 타입 변수에 할당하는 것은 불가하다.
 - byte와 short 타입은 접미사가 따로 없으므로 int 타입의 literal을 사용한다. 범위만 준수하면 할당 가능하다.
 
@@ -187,4 +202,3 @@ int i2 = 123L; // 나타낼 수 있는 범위더라도 long 타입이므로 불�
 > ```java
 > <Class name> new <Variable name>
 > ```
-

@@ -3,12 +3,13 @@ title:  "[Java] 형변환 (Casting)"
 excerpt: "Java의 형변환을 설명한다."
 
 categories:
-  - Java Language
+  - [Java] Language
 tags:
-  - Java Variable
+  - [Java] Variable
 
 last_modified_at: 2023-10-10T01:36:00-05:00
 ---
+
 ```java
 // ()에 타입을 작성한다.
 (<Type>) <Variable or Literal>
@@ -43,6 +44,7 @@ last_modified_at: 2023-10-10T01:36:00-05:00
 <br>
 
 ## 4. 자동 형변환
+
 ```java
 float f = 1234; // float f = (float)1234;와 같다.
 ```

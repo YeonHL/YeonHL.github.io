@@ -3,13 +3,15 @@ title:  "[Ubuntu Server] 암호화 (Crypt)"
 excerpt: "Ubuntu Server 22.04 LTS에서 암호화를 진행한다."
 
 categories:
-  - Ubuntu Server
+  - [Linux] Ubuntu Server
 tags:
-  - Ubuntu Server Setting
+  - [Linux] Ubuntu Server Setting
 
 last_modified_at: 2023-10-22T02:10:00-05:00
 ---
+
 ## 1. 암호화 Volume 생성
+
 - 루트 사용자 권한에서 진행한다. (`sudo su`)
 - cryptsetup 패키지를 사용한다. Ubuntu Server에서는 기본 패키지로 제공한다.
 - 암호화 하려는 Volume이 `/dev/sda`라고 가정한다.
@@ -42,6 +44,7 @@ mkfs.ext4 /dev/mapper/cryptdata
 <br>
 
 ## 2. 저장소 자동 복호화 설정
+
 - 부팅 시 저장소 복호화를 자동으로 시도하도록 설정할 수 있다. (부팅 단계에서 암호를 입력해야 한다.)
 - 아래 명령어로 Volume의 UUID를 확인한다.
 
@@ -60,6 +63,7 @@ cryptdata UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx none luks,discard
 <br>
 
 ## 3. 저장소 자동 mount 설정
+
 - 부팅 시 저장소 자동 mount까지 시도하려면 `/etc/fstab` 파일에서 작업한다.
 - `nano /etc/fstab` 등으로 다음과 같이 입력한다.
 

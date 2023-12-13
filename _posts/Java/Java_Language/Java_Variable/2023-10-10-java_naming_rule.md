@@ -3,12 +3,13 @@ title:  "[Java] 변수명 규칙 (Naming Rule)"
 excerpt: "Java의 변수명 규칙을 설명한다."
 
 categories:
-  - Java Language
+  - [Java] Language
 tags:
-  - Java Variable
+  - [Java] Variable
 
 last_modified_at: 2023-10-10T00:23:00-05:00
 ---
+
 ## 1. 식별자 (Identifier)
 
 - 변수명과 같이 프로그래밍에서 사용되는 모든 이름
