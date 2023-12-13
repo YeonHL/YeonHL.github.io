@@ -1,11 +1,11 @@
 ---
-title:  "[Java] 변수와 상수 (Variable & Constant)"
+title: "[Java] 변수와 상수 (Variable & Constant)"
 excerpt: "Java의 변수와 상수에 대해 설명한다."
 
 categories:
-  - [Java] Language
+  - Java Language
 tags:
-  - [Java] Variable
+  - Java Variable
 
 last_modified_at: 2023-10-10T00:23:00-05:00
 ---

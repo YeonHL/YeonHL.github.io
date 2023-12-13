@@ -1,11 +1,11 @@
 ---
-title:  "[Java] 변수명 규칙 (Naming Rule)"
+title: "[Java] 변수명 규칙 (Naming Rule)"
 excerpt: "Java의 변수명 규칙을 설명한다."
 
 categories:
-  - [Java] Language
+  - Java Language
 tags:
-  - [Java] Variable
+  - Java Variable
 
 last_modified_at: 2023-10-10T00:23:00-05:00
 ---

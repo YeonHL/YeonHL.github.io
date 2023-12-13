@@ -1,11 +1,11 @@
 ---
-title:  "[Ubuntu Server] GUI 환경 구성 (GUI)"
+title: "[Ubuntu Server] GUI 환경 구성 (GUI)"
 excerpt: "Ubuntu Server 22.04 LTS를 GUI 환경으로 사용할 수 있도록 설정한다."
 
 categories:
-  - [Linux] Ubuntu Server
+  - Linux Ubuntu Server
 tags:
-  - [Linux] Ubuntu Server Setting
+  - Linux Ubuntu Server Setting
 
 last_modified_at: 2023-10-22T02:45:00-05:00
 ---

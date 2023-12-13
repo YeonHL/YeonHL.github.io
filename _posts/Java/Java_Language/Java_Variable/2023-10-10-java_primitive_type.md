@@ -1,11 +1,11 @@
 ---
-title:  "[Java] 데이터 타입 (Primitive Type)"
+title: "[Java] 데이터 타입 (Primitive Type)"
 excerpt: "Java의 데이터 타입에 대해 설명한다."
 
 categories:
-  - [Java] Language
+  - Java Language
 tags:
-  - [Java] Variable
+  - Java Variable
 
 last_modified_at: 2023-10-10T00:23:00-05:00
 ---
