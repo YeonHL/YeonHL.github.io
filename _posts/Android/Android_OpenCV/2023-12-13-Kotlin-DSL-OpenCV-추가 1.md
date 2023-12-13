@@ -1,10 +1,12 @@
 ---
 title: [Android] Kotlin DSL OpenCV Module 사용
 excerpt: Kotlin DSL에 OpenCV Module 추가하기
+
 categories:
   - Android OpenCV
 tags:
   - Kotlin DSL
+
 last_modified_at: 2023-12-13T22:55:00-05:00
 ---
 
