@@ -1,5 +1,5 @@
 ---
-title: "[Go] Language"
+title: "Language (Go)"
 permalink: go-language/
 layout: category
 author_profile: true

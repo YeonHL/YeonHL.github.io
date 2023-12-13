@@ -1,5 +1,5 @@
 ---
-title: "Android Face Recognition (2023)"
+title: "[Android] Face Recognition (2023)"
 permalink: face-recognition-android/
 layout: category
 author_profile: true
