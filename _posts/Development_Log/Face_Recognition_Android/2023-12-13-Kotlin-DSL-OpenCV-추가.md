@@ -1,5 +1,5 @@
 ---
-title: Kotlin DSL에 OpenCV Module 추가하기
+title: [Android] Kotlin DSL에 OpenCV Module 추가하기
 excerpt: Kotlin DSL 기반 프로젝트에 OpenCV Module 추가하기
 categories:
   - Android Face Recognition (2023)
