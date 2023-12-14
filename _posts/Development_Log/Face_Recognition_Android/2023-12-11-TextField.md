@@ -6,6 +6,7 @@ categories:
   - Android Face Recognition 2023
 tags:
   - Android Kotlin
+  - Android Compose
 
 last_modified_at: 2023-12-11T22:55:00-05:00
 ---
