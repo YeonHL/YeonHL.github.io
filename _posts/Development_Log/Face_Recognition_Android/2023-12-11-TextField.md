@@ -1,6 +1,6 @@
 ---
-title: [Android] Compose TextField 생성
-excerpt: Compose의 TextField Component 생성
+title: "[Android] Compose TextField 생성"
+excerpt: "Compose의 TextField Component 생성"
 
 categories:
   - Android Face Recognition 2023
