@@ -55,27 +55,7 @@ fun TextField(
 ## 2. 범용 `TextField` 생성
 
 ```kotlin
-package com.yhl.face.ui.base
-
-import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.text.KeyboardActions
-import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.LocalTextStyle
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextFieldColors
-import androidx.compose.material3.TextFieldDefaults
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.TextFieldValue
-import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.tooling.preview.Preview
-
-
+// …
 @Composable
 fun BaseTextField(
     value: TextFieldValue,
@@ -101,61 +81,8 @@ fun BaseTextField(
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     shape: Shape = TextFieldDefaults.shape,
     colors: TextFieldColors = TextFieldDefaults.colors()
-) {
-    if (supportingText == "") {
-        OutlinedTextField(
-            value = value,
-            onValueChange = onValueChange,
-            modifier = modifier,
-            enabled = enabled,
-            readOnly = readOnly,
-            textStyle = textStyle,
-            label = { Text(label, fontWeight = FontWeight.SemiBold) },
-            placeholder = { Text(placeholder) },
-            leadingIcon = leadingIcon,
-            trailingIcon = trailingIcon,
-            prefix = { Text(prefix) },
-            suffix = { Text(suffix) },
-            isError = isError,
-            visualTransformation = visualTransformation,
-            keyboardOptions = keyboardOptions,
-            keyboardActions = keyboardActions,
-            singleLine = singleLine,
-            maxLines = maxLines,
-            minLines = minLines,
-            interactionSource = interactionSource,
-            shape = shape,
-            colors = colors
-        )
-    }
-    else {
-        OutlinedTextField(
-            value = value,
-            onValueChange = onValueChange,
-            modifier = modifier,
-            enabled = enabled,
-            readOnly = readOnly,
-            textStyle = textStyle,
-            label = { Text(label, fontWeight = FontWeight.SemiBold) },
-            placeholder = { Text(placeholder) },
-            leadingIcon = leadingIcon,
-            trailingIcon = trailingIcon,
-            prefix = { Text(prefix) },
-            suffix = { Text(suffix) },
-            supportingText = { Text(supportingText) },
-            isError = isError,
-            visualTransformation = visualTransformation,
-            keyboardOptions = keyboardOptions,
-            keyboardActions = keyboardActions,
-            singleLine = singleLine,
-            maxLines = maxLines,
-            minLines = minLines,
-            interactionSource = interactionSource,
-            shape = shape,
-            colors = colors,
-        )
-    }
-}
+)
+// …
 ```
 
 - `TextField`에서 가능한 모든 parameter를 입력 받으면서 `Text`가 입력될 부분은 `String`만 입력 받아서 사용했다.
@@ -166,25 +93,7 @@ fun BaseTextField(
 ## 3. App에서 사용할 `TextField`
 
 ```kotlin
-package com.yhl.face.ui.base
-
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.TextRange
-import androidx.compose.ui.text.input.TextFieldValue
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import com.dbinc.uface.ui.base.BaseTextField
-
-
+// …
 @Composable
 fun SettingTextField(
     value: TextFieldValue,
@@ -203,6 +112,7 @@ fun SettingTextField(
         singleLine = true
     )
 }
+// …
 ```
 
 - 앞서 생성한 `BaseTextField`를 활용하여 설정 화면 전용 `SettingTextField`를 만들었다.
