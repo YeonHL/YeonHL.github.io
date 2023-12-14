@@ -54,8 +54,8 @@ sidebar:
     children:
       - title: "[Java] Language"
         url: java-language/
-      - title: "[Java] Library"
-        url: java-library/
+      # - title: "[Java] Library"
+      #   url: java-library/
   # - title: "Kotlin"
   #   children:
   #     - title: "[Kotlin] Language"
