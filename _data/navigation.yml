@@ -31,68 +31,68 @@ sidebar:
         url: android-compose/
       - title: "[Android] OpenCV"
         url: android-opencv/
-  - title: "Dart"
-    children:
-      - title: "[Dart] Language"
-        url: dart-language/
-      - title: "[Dart] Library"
-        url: dart-library/
-      - title: "Flutter"
-        url: flutter/
-  - title: "Data"
-  - title: "Design"
-    children:
-      - title: "Figma"
-        url: figma/
-  - title: "Go"
-    children:
-      - title: "[Go] Language"
-        url: go-language/
-      - title: "[Go] Library"
-        url: go-library/
+  # - title: "Dart"
+  #   children:
+  #     - title: "[Dart] Language"
+  #       url: dart-language/
+  #     - title: "[Dart] Library"
+  #       url: dart-library/
+  #     - title: "Flutter"
+  #       url: flutter/
+  # - title: "Data"
+  # - title: "Design"
+  #   children:
+  #     - title: "Figma"
+  #       url: figma/
+  # - title: "Go"
+  #   children:
+  #     - title: "[Go] Language"
+  #       url: go-language/
+  #     - title: "[Go] Library"
+  #       url: go-library/
   - title: "Java"
     children:
       - title: "[Java] Language"
         url: java-language/
       - title: "[Java] Library"
         url: java-library/
-  - title: "Kotlin"
-    children:
-      - title: "[Kotlin] Language"
-        url: kotlin-language/
-      - title: "[Kotlin] Library"
-        url: kotlin-library/
-  - title: "Python"
-    children:
-      - title: "[Python] Language"
-        url: python-language/
-      - title: "[Python] Library"
-        url: python-library/
+  # - title: "Kotlin"
+  #   children:
+  #     - title: "[Kotlin] Language"
+  #       url: kotlin-language/
+  #     - title: "[Kotlin] Library"
+  #       url: kotlin-library/
+  # - title: "Python"
+  #   children:
+  #     - title: "[Python] Language"
+  #       url: python-language/
+  #     - title: "[Python] Library"
+  #       url: python-library/
   - title: "Linux"
     children:
-      - title: "[Linux] Ubuntu"
-        url: ubuntu/
+      # - title: "[Linux] Ubuntu"
+      #   url: ubuntu/
       - title: "[Linux] Ubuntu Server"
         url: ubuntu-server/
-      - title: "[Linux] Raspbian"
-        url: raspbian/
+      # - title: "[Linux] Raspbian"
+      #   url: raspbian/
   - title: "Software Engineering"
     children:
       - title: "Computer Science"
         url: computer-science/
-      - title: "Deliverables"
-        url: deliverables/
-      - title: "Design Pattern"
-        url: design-pattern
-  - title: "Tools"
-    children:
-      - title: "Git"
-        url: git/
-      - title: "IDE"
-        url: ide/
-      - title: "Jira"
-        url: jira/
-      - title: "Obsidian"
-        url: obsidian/
-      - title: "Postman"
-        url: postman/
+      # - title: "Deliverables"
+      #   url: deliverables/
+      # - title: "Design Pattern"
+      #   url: design-pattern
+  # - title: "Tools"
+  #   children:
+  #     - title: "Git"
+  #       url: git/
+  #     - title: "IDE"
+  #       url: ide/
+  #     - title: "Jira"
+  #       url: jira/
+  #     - title: "Obsidian"
+  #       url: obsidian/
+  #     - title: "Postman"
+  #       url: postman/
