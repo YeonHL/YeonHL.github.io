@@ -3,9 +3,9 @@ title: "[Ubuntu Server] 설치 (Installation)"
 excerpt: "폐쇄망 네트워크에서 Ubuntu Server 22.04 LTS 설치를 진행한다."
 
 categories:
-  - Linux Ubuntu Server
+  - Ubuntu Server
 tags:
-  - Linux Ubuntu Server Setting
+  - Ubuntu Server Setting
 
 last_modified_at: 2023-10-21T23:45:00-05:00
 ---
