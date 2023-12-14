@@ -17,10 +17,10 @@ sidebar:
     children:
       - title: "[Android] Face Recognition (2023)"
         url: face-recognition-android/
-      - title: "[Python] Face Recognition (2023)"
-        url: face-recognition-python/
-      - title: "[Android] Travel App (2023 ~ )"
-        url: travel-app-android/
+      # - title: "[Python] Face Recognition (2023)"
+      #   url: face-recognition-python/
+      # - title: "[Android] Travel App (2023 ~ )"
+      #   url: travel-app-android/
   - title: "Algorithm Problem"
     children:
       - title: "Baekjoon"
