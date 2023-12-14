@@ -25,12 +25,12 @@ sidebar:
     children:
       - title: "Baekjoon"
         url: baekjoon/
-  - title: "Android"
-    children:
-      - title: "[Android] Compose"
-        url: android-compose/
-      - title: "[Android] OpenCV"
-        url: android-opencv/
+  # - title: "Android"
+  #   children:
+  #     - title: "[Android] Compose"
+  #       url: android-compose/
+  #     - title: "[Android] OpenCV"
+  #       url: android-opencv/
   # - title: "Dart"
   #   children:
   #     - title: "[Dart] Language"
