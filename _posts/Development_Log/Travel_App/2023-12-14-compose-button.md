@@ -1,6 +1,6 @@
 ---
-title:  ex) "[Android] Button 구현"
-excerpt: ex) "Button을 구현하며 겪은 과정을 작성했다."
+title: "[Android] Button 구현"
+excerpt: "Button을 구현하며 겪은 과정을 작성했다."
 
 categories:
   - Android Travel App 2023
