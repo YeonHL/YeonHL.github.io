@@ -3,7 +3,7 @@ title: "[Android] Button 구현"
 excerpt: "Button을 구현하며 겪은 과정을 작성했다."
 
 categories:
-  - Android Travel App 2023
+  - Android Travel App
 tags:
   - Android Kotlin
   - Android Compose
@@ -19,10 +19,6 @@ last_modified_at: 2023-12-14T23:36:00-05:00
 ## 1. App에서 사용할 Button
 
 ```kotlin
-import androidx.compose.material3.ElevatedButton
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
-
 @Composable
 fun AppElevatedButton(label:String, onClick: () -> Unit) {
     ElevatedButton(onClick = { onClick() }) {

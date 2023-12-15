@@ -3,7 +3,7 @@ title: "[Android] TextField의 재사용성"
 excerpt: "Compose의 TextField를 생성하면서 재사용성을 향상하기 위한 시도"
 
 categories:
-  - Android Face Recognition 2023
+  - Android Face Recognition
 tags:
   - Android Kotlin
   - Android Compose
