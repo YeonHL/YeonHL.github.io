@@ -16,6 +16,8 @@ last_modified_at: 2023-12-13T22:55:00-05:00
 - Kotlin 기반으로 앱을 생성하고 있으므로 gradle도 익숙한 Kotlin으로 사용하고자 OpenCV의 Groovy gradle 파일을 Kotlin gradle 파일로 수정했다.
 - Kotlin DSL에 적용한 사례를 찾기 어려워서 직접 시도했다.
 
+<br>
+
 ## 1. OpenCV 다운로드
 
 <img src="https://i.ibb.co/KNQXQs9/opencv-download-android.png" style="width: 600px" />

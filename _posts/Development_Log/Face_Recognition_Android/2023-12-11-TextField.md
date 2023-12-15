@@ -14,6 +14,8 @@ last_modified_at: 2023-12-11T22:55:00-05:00
 - Compose를 이용한 설정 화면 구성 중 `TextField`를 사용할 상황이 있었고, 해당 component의 재사용성을 고민했다.
 - 다른 Android Compose 구성에도 사용할 `TextField`를 생성하고 이를 활용하여 이번 프로젝트에서 사용할 `TextField`를 생성했다.
 
+<br>
+
 ## 1. Compose의 `TextField`
 
 ```kotlin
