@@ -5,8 +5,8 @@ excerpt: "Button을 구현하며 겪은 과정을 작성했다."
 categories:
   - Android Travel App
 tags:
-  - Android Kotlin
-  - Android Compose
+  - Android Kotlin
+  - Android Compose
 
 last_modified_at: 2023-12-14T23:36:00-05:00
 ---
