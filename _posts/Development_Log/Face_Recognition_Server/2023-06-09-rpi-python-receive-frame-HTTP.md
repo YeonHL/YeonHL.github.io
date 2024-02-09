@@ -10,6 +10,9 @@ tags:
 
 last_modified_at: 2023-06-09T22:55:00-05:00
 ---
+## 관련 글
+- [[Android/Java] HTTP 프레임 전송 구현](https://yeonhl.github.io/face%20recognition%20android%20client/java-send-frame-HTTP/)
+
 ## 구현 이유
 - 기존 구현 방식은 라즈베리파이에 카메라 모듈을 연결하여 인식을 진행했다.
 - 라즈베리파이에서 인식을 진행하고 그 결과를 웹으로 보여주는 방식을 사용했지만, 다음의 문제점이 있었다.
@@ -21,7 +24,7 @@ last_modified_at: 2023-06-09T22:55:00-05:00
 
 
 ## 구현 과정
-### Flask: Endpoint 설정
+### Endpoint 설정
 ```python
 from flask import request
 
@@ -39,7 +42,7 @@ def image():
 - `flask`의 `request`로 수신한 데이터를 불러왔다. 데이터는 Android에서 전송한 Mat 객체의 png `bytes`이다.
 - 이미지 처리는 `service.py` 파일에 `FaceService` Class를 생성하고, Instance를 생성하여 사용했다.
 
-### OpenCV: 이미지 입력
+### 이미지 입력
 ```python
 import cv2
 import numpy as np

@@ -7,9 +7,13 @@ categories:
 tags:
   - Android Java
   - Android HTTP
+  - Android OpenCV
 
 last_modified_at: 2023-06-09T22:55:00-05:00
 ---
+## 관련 글
+- [[RPI/Python] 이미지 수신](https://yeonhl.github.io/face%20recognition%20server/rpi-python-receive-frame-HTTP/)
+
 ## 구현 이유
 - 기존 구현 방식은 라즈베리파이에 카메라 모듈을 연결하여 인식을 진행했다.
 - 라즈베리파이에서 인식을 진행하고 그 결과를 웹으로 보여주는 방식을 사용했지만, 다음의 문제점이 있었다.
@@ -21,7 +25,7 @@ last_modified_at: 2023-06-09T22:55:00-05:00
 
 
 ## 구현 과정
-### OpenCV: 프레임 처리
+### 프레임 처리
 ```java
 import org.opencv.android.CameraBridgeViewBase.CvCameraViewFrame;
 import org.opencv.core.Core;
@@ -54,14 +58,14 @@ public Mat onCameraFrame(CvCameraViewFrame inputFrame) {
 - 문제가 없다는 것을 확인한 후에는 코드를 제거하여 사용자에게 제공되는 카메라 화면과 동일한 해상도로 지정하였다.
 - 사용자에게 보여주는 화면에는 전송 없이 Android 자체에서 Face Detection을 적용한 화면을 보여줬다.
 
-### OpenCV: 프레임 변환
+### 프레임 변환
 ```java
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfByte;
 import org.opencv.imgcodecs.Imgcodecs;
 
 
-private byte[] matToPngByte (Mat frame) {
+private byte[] matToPngByteConverter (Mat frame) {
     MatOfByte buffer = new MatOfByte();
     Imgcodecs.imencode(IMAGE_TYPE, frame, buffer);
     byte[] imageData = buffer.toArray();
@@ -73,7 +77,7 @@ private byte[] matToPngByte (Mat frame) {
 - `IMAGE_TYPE`은 변경할 때를 고려하여 상단에서 `".png"`로 따로 선언하여 사용했다.
 
 
-### OKHttp3: 프레임 전송
+### 프레임 전송
 ```java
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -82,7 +86,7 @@ import okhttp3.RequestBody;
 
 // ..
     
-    private void sendFrameToServer(byte[] imageData) {
+    private void sendFrame(byte[] imageData) {
         String SERVER_URI = SERVER_URL + "/image";
         
         RequestBody requestBody = RequestBody.create(IMAGE_MEDIA_TYPE, imageData);
