@@ -132,7 +132,7 @@ import okhttp3.Response;
 - `onResponse`는 서버와의 통신이 성공했을 때 실행된다. `response`에 서버의 응답 정보를 담으며, 응답 코드가 200~299 범위 내에 있으면 `response.isSuccessful()`의 코드가 실행된다.
 - 요청 후에는 자원을 해제하여 메모리를 누수를 방지해야 한다. `try (Response response = client.newCall(request).execute())`와 같이 `try-with-resources` 블록을 사용하였다. 혹은 `response.close()`를 사용할 수도 있다.
 
-> #### OkHttpClient
+> #### OkHttpClient 설정
 > ```java
 > OkHttpClient client = new OkHttpClient.Builder()
 >                                       .connectTimeout(0, TimeUnit.SECONDS)
