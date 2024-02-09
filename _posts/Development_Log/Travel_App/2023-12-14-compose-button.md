@@ -1,9 +1,9 @@
 ---
-title: "[Android] Button 구현"
+title: "[Android/Kotlin] Button 구현"
 excerpt: "Button을 구현하며 겪은 과정을 작성했다."
 
 categories:
-  - Android Travel App
+  - Travel App Android Client
 tags:
   - Android Kotlin
   - Android Compose

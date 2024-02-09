@@ -15,12 +15,12 @@ main:
 sidebar:
   - title: "Development Log"
     children:
-      - title: "[Android] Face Recognition (2023)"
-        url: face-recognition-android/
-      # - title: "[Python] Face Recognition (2023)"
-      #   url: face-recognition-python/
-      - title: "[Android] Travel App (2023 ~ )"
-        url: travel-app-android/
+      - title: "[Server] Face Recognition (2023 ~ )"
+        url: face-recognition-server/
+      - title: "[Client/Android] Face Recognition (2023 ~ )"
+        url: face-recognition-client-android/
+      - title: "[Client/Android] Travel App (2023 ~ )"
+        url: travel-app-client-android/
   - title: "Algorithm Problem"
     children:
       - title: "Baekjoon"

@@ -1,9 +1,9 @@
 ---
-title: "[Python] Face Recognition (2023)"
-permalink: face-recognition-python/
+title: "[Server] Face Recognition (2023 ~ )"
+permalink: face-recognition-server/
 layout: category
 author_profile: true
-taxonomy: Python Face Recognition 2023
+taxonomy: Face Recognition Server
 ---
 
-2023-04 ~ 2023-12 사내 얼굴 인식 Python 개발
+2023-04 ~ 사내 얼굴 인식 Python 개발

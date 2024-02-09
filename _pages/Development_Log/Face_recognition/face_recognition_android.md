@@ -1,9 +1,9 @@
 ---
-title: "[Android] Face Recognition (2023)"
-permalink: face-recognition-android/
+title: "[Client/Android] Face Recognition (2023 ~ )"
+permalink: face-recognition-client-android/
 layout: category
 author_profile: true
-taxonomy: Android Face Recognition
+taxonomy: Face Recognition Android Client
 ---
 
-2023-05 ~ 2023-12 사내 얼굴 인식 Android 개발
+2023-05 ~ 사내 얼굴 인식 Android 개발
