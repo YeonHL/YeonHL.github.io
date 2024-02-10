@@ -7,7 +7,7 @@ categories:
 tags:
   - Python Random
 
-last_modified_at: 2023-06-12T22:55:00-05:00
+last_modified_at: 2023-06-15T22:55:00-05:00
 ---
 ## 구현 이유
 - 비즈니스 로직에서 요청에 따라 간단한 인증번호를 제공해야 하는 요구 사항이 발생했다.
