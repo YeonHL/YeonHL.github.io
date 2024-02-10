@@ -73,6 +73,7 @@ private byte[] matToPngByteConverter (Mat frame) {
     return imageData;
 }
 ```
+- 이미지 확장자는 손실 없이 전송하는 것이 인식율에 좋을 것이라 판단하여 `.png`로 결정했다.
 - 프레임을 전송하기 위해 `Mat` 객체를 png 이미지의 바이트로 변환하는 함수를 생성했다.
 - `IMAGE_TYPE`은 변경할 때를 고려하여 상단에서 `".png"`로 따로 선언하여 사용했다.
 
@@ -96,7 +97,7 @@ import okhttp3.RequestBody;
                 .build();
     }
 ```
-- 프레임 전송에는 OKHttp3을 사용했다.
+- Face Detection이 성공했을 경우에 실행할 프레임 전송 함수이다. OKHttp3을 사용했다.
 - `byte[] imageData`를 입력 받아서 HTTP로 전송하고 `void`로 반환하는 함수의 일부분이다.
 - `SERVER_URL`은 서버의 IP를 상단에서 선언하여 사용했다. `/image`는 서버에서 지정한 엔드포인트이다.
 - `RequestBody`에 프레임을 포함하고 이미지 타입을 명시하여 생성했다. 
