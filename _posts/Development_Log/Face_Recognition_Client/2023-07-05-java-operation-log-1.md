@@ -1,6 +1,6 @@
 ---
 title: "[Android/Java] 서비스 운영 일지 1"
-excerpt: "서비스를 운영하면서 시도했던 내용들에 대한 글"
+excerpt: "서비스를 운영하면서 시도했던 내용들"
 
 categories:
   - Face Recognition Android Client

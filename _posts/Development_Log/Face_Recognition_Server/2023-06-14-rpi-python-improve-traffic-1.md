@@ -1,5 +1,5 @@
 ---
-title: "[RPI/Python] 프레임 전송 트래픽 개선"
+title: "[RPI/Python] 프레임 전송 트래픽 개선 1"
 excerpt: "불필요한 프레임 전송 줄이기"
 
 categories:
