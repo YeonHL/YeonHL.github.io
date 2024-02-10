@@ -1,5 +1,5 @@
 ---
-title: "[RPI/Python] 간단한 인증번호 생성"
+title: "[RPI/Python] 인증번호 생성"
 excerpt: "인증번호 로직을 위한 랜덤 번호 생성"
 
 categories:
