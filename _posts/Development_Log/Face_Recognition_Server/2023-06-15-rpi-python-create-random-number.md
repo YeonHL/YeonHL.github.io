@@ -4,9 +4,6 @@ excerpt: "인증번호 로직을 위한 랜덤 번호 생성"
 
 categories:
   - Face Recognition Server
-tags:
-  - Python Random
-
 last_modified_at: 2023-06-15T22:55:00-05:00
 ---
 ## 구현 이유

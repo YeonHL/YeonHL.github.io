@@ -1,16 +1,17 @@
 ---
-title: "[Android/Java] 프레임 전송 트래픽 개선"
+title: "[Android/Java] 프레임 전송 트래픽 개선 1"
 excerpt: "불필요한 프레임 전송 줄이기"
 
 categories:
   - Face Recognition Android Client
 tags:
   - Android Java
+  - Android Async
   - Android OpenCV
 last_modified_at: 2023-06-14T22:55:00-05:00
 ---
 ## 관련 글
-- [[RPI/Python] 프레임 전송 트래픽 개선](https://yeonhl.github.io/face%20recognition%20server/rpi-python-improve-traffic/)
+- [[RPI/Python] 프레임 전송 트래픽 개선](https://yeonhl.github.io/face%20recognition%20server/rpi-python-improve-traffic-1/)
 
 ## 구현 이유
 - 불필요한 프레임 전송 요청 및 짧은 시간 내 너무 많은 요청을 전송하여 비즈니스 로직 성능에 악영향을 주는 문제가 있었다.

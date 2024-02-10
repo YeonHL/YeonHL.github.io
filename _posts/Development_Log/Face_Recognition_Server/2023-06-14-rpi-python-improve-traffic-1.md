@@ -4,13 +4,10 @@ excerpt: "불필요한 프레임 전송 줄이기"
 
 categories:
   - Face Recognition Server
-tags:
-  - Python Flask
-
 last_modified_at: 2023-06-14T22:55:00-05:00
 ---
 ## 관련 글
-- [[Android/Java] 프레임 전송 트래픽 개선](https://yeonhl.github.io/face%20recognition%20android%20client/java-improve-traffic/)
+- [[Android/Java] 프레임 전송 트래픽 개선](https://yeonhl.github.io/face%20recognition%20android%20client/java-improve-traffic-1/)
 
 
 ## 구현 이유

@@ -6,7 +6,6 @@ categories:
   - Face Recognition Server
 tags:
   - Python Flask
-  - Python OpenCV
 
 last_modified_at: 2023-06-09T22:55:00-05:00
 ---
