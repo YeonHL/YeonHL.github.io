@@ -76,9 +76,9 @@ from datetime import datetime, timedelta
 
 
 current_date = datetime.strptime(current_date, "%Y-%m-%d")
-    previous_date = datetime.strptime(previous_date, "%Y-%m-%d")
+previous_date = datetime.strptime(previous_date, "%Y-%m-%d")
 
-    return current_date - timedelta(days=current_date.weekday()) == previous_date - timedelta(days=previous_date.weekday())
+return current_date - timedelta(days=current_date.weekday()) == previous_date - timedelta(days=previous_date.weekday())
 ```
 - 공휴일이 있는 주가 존재하므로 모든 주가 5일의 근무일을 갖지 않는다. 연속된 두 근무일을 입력 받아서 같은 주에 속하는지 확인하는 함수를 만들었다.
 - `strptime`으로 `str`을 `datetime` 객체로 변환했다.
