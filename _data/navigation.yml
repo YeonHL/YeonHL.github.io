@@ -13,18 +13,22 @@ main:
   # - title: "Sitemap"
   #   url: /sitemap/
 sidebar:
-  - title: "Development Log"
+  - title: "DevOps"
     children:
-      - title: "[Server] Face Recognition (2023 ~ )"
-        url: face-recognition-server/
-      - title: "[Client/Android] Face Recognition (2023 ~ )"
-        url: face-recognition-client-android/
-      - title: "[Client/Android] Travel App (2023 ~ )"
-        url: travel-app-client-android/
-  - title: "Algorithm Problem"
-    children:
-      - title: "Baekjoon"
-        url: baekjoon/
+      - title: "Git"
+        url: git/
+  # - title: "Development Log"
+  #   children:
+  #     - title: "[Server] Face Recognition (2023 ~ )"
+  #       url: face-recognition-server/
+  #     - title: "[Client/Android] Face Recognition (2023 ~ )"
+  #       url: face-recognition-client-android/
+  #     - title: "[Client/Android] Travel App (2023 ~ )"
+  #       url: travel-app-client-android/
+  # - title: "Algorithm Problem"
+  #   children:
+  #     - title: "Baekjoon"
+  #       url: baekjoon/
   # - title: "Android"
   #   children:
   #     - title: "[Android] Compose"
@@ -50,12 +54,12 @@ sidebar:
   #       url: go-language/
   #     - title: "[Go] Library"
   #       url: go-library/
-  - title: "Java"
-    children:
-      - title: "[Java] Language"
-        url: java-language/
-      # - title: "[Java] Library"
-      #   url: java-library/
+  # - title: "Java"
+  #   children:
+  #     - title: "[Java] Language"
+  #       url: java-language/
+  # - title: "[Java] Library"
+  #   url: java-library/
   # - title: "Kotlin"
   #   children:
   #     - title: "[Kotlin] Language"
@@ -68,22 +72,22 @@ sidebar:
   #       url: python-language/
   #     - title: "[Python] Library"
   #       url: python-library/
-  - title: "Linux"
-    children:
-      # - title: "[Linux] Ubuntu"
-      #   url: ubuntu/
-      - title: "[Linux] Ubuntu Server"
-        url: ubuntu-server/
-      # - title: "[Linux] Raspbian"
-      #   url: raspbian/
-  - title: "Software Engineering"
-    children:
-      - title: "Computer Science"
-        url: computer-science/
-      # - title: "Deliverables"
-      #   url: deliverables/
-      # - title: "Design Pattern"
-      #   url: design-pattern
+  # - title: "Linux"
+  #   children:
+  #     # - title: "[Linux] Ubuntu"
+  #     #   url: ubuntu/
+  #     - title: "[Linux] Ubuntu Server"
+  #       url: ubuntu-server/
+  #     # - title: "[Linux] Raspbian"
+  #     #   url: raspbian/
+  # - title: "Software Engineering"
+  #   children:
+  #     - title: "Computer Science"
+  #       url: computer-science/
+  #     # - title: "Deliverables"
+  #     #   url: deliverables/
+  #     # - title: "Design Pattern"
+  #     #   url: design-pattern
   # - title: "Tools"
   #   children:
   #     - title: "Git"
