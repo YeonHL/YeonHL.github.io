@@ -1,37 +1,51 @@
-name: Deploy to GitHub Pages
+name: Deploy to Github Pages
 
 on:
-  push:
-    branches:
-      - main # main 브랜치가 업데이트될 때 동작
-  workflow_dispatch: # 수동으로 실행 가능
+    push:
+        branches: [master]
+    pull_request:
+        branches: [master]
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    steps:
-      # 리포지토리 체크아웃
-      - name: Checkout repository
-        uses: actions/checkout@v3
+        permissions:
+            # Give the default GITHUB_TOKEN write permission to commit and push the
+            # added or changed files to the repository.
+            contents: write
 
-      # Node.js 환경 설정
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16" # 사용할 Node.js 버전
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
 
-      # 의존성 설치
-      - name: Install dependencies
-        run: npm install
+            - name: Cache Hugo resources
+              uses: actions/cache@v4
+              env:
+                  cache-name: cache-hugo-resources
+              with:
+                  path: resources
+                  key: ${{ env.cache-name }}
 
-      # 빌드 수행
-      - name: Build project
-        run: npm run build
+            - uses: actions/setup-go@v5
+              with:
+                  go-version: "^1.17.0"
+            - run: go version
 
-      # GitHub Pages로 배포
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build # 빌드된 파일들이 위치한 폴더
+            - name: Setup Hugo
+              uses: peaceiris/actions-hugo@v2
+              with:
+                  hugo-version: "latest"
+                  extended: true
+
+            - name: Build
+              run: hugo --minify --gc
+
+            - name: Deploy 🚀
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                  branch: gh-pages
+                  folder: public
+                  clean: true
+                  single-commit: true

@@ -1,0 +1,4 @@
+baseURL = 'https://yeonhl.github.io/'
+languageCode = 'ko-kr'
+title = "YeonHL's Blog"
+theme = 'stack'
