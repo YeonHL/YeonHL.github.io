@@ -1,0 +1,12 @@
+# Rename this file to languages.toml to enable multilingual support
+[ko]
+languageName = "Korean"
+languagedirection = "ltr"
+title = "연호의 블로그"
+weight = 1
+
+[en]
+languageName = "English"
+languagedirection = "ltr"
+title = "YeonHo's blog"
+weight = 2
