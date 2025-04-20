@@ -3,11 +3,12 @@ title: "Search"
 slug: "search"
 layout: "search"
 outputs:
-    - html
-    - json
+  - html
+  - json
 menu:
-    main:
-        weight: 3
-        params: 
-            icon: search
+  main:
+    name: "검색"
+    weight: 999
+    params:
+      icon: search
 ---
