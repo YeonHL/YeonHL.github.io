@@ -1,0 +1,33 @@
+{{/* 
+  Shortcode: resizeimg
+  사용법: 
+  {{< resizeimg src="image.jpg" width="800" caption="설명 텍스트" class="shadow-lg" >}}
+*/}}
+
+{{ $src := .Get "src" }}
+{{ $width := .Get "width" }}
+{{ $height := .Get "height" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $class := .Get "class" | default "" }}
+{{ $caption := .Get "caption" | default "" }}
+
+{{ $img := .Page.Resources.GetMatch $src }}
+
+{{ if and $width $height }}
+  {{ $img = $img.Resize (printf "%sx%s" $width $height) }}
+{{ else if $width }}
+  {{ $img = $img.Resize (printf "%sx" $width) }}
+{{ else if $height }}
+  {{ $img = $img.Resize (printf "x%s" $height) }}
+{{ end }}
+
+<figure class="text-center mb-4">
+  <img src="{{ $img.RelPermalink }}" 
+       alt="{{ $alt }}" 
+       width="{{ $img.Width }}" 
+       height="{{ $img.Height }}" 
+       class="img-fluid {{ $class }}">
+  {{ with $caption }}
+    <figcaption class="mt-2 text-muted small">{{ . | markdownify }}</figcaption>
+  {{ end }}
+</figure>
