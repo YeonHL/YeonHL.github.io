@@ -6,6 +6,12 @@ lastmod: 2025-04-22
 slug: introduce
 comments: true
 
+links:
+  - title: YeonHL/Docs-software
+    description: 임시로 공개한 소프트웨어 문서 저장소입니다. 블로그 포스트의 형태로 다시 작성할 예정입니다.
+    website: https://github.com/YeonHL/Docs-software
+    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+
 menu:
   main:
     name: 소개
@@ -28,5 +34,3 @@ menu:
 - **IT 지식**: 공부한 IT 관련 지식을 이해하기 쉽도록 정리하여 작성합니다.
 - **개발 회고**: 시스템을 구현하면서 접근 방법과 지표를 얻기 위한 방법, 판단 근거 등 고민했던 과정과 스스로 내린 결론을 작성합니다.
 - **메모**: 개인적으로 공유하고 싶은 내용을 작성합니다.
-
-방문자가 컨텐츠를 쉽게 파악할 수 있는 구조를 계속 고민하겠습니다.
