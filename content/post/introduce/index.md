@@ -6,13 +6,11 @@ lastmod: 2025-04-22
 slug: introduce
 comments: true
 weight: 1
-
 links:
   - title: YeonHL/Docs-software
     description: 2025년 4월까지 작성했던 소프트웨어 문서 저장소입니다.
     website: https://github.com/YeonHL/Docs-software
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-
 menu:
   main:
     name: 소개
