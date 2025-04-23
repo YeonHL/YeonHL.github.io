@@ -1,0 +1,64 @@
+{{/* --- body-class 정의는 그대로 유지 --- */}} {{ define "body-class" }}
+article-page {{/* Enable the right sidebar if - Widget different from 'TOC' is
+enabled - TOC is enabled and not empty */}} {{- $HasWidgetNotTOC := false -}}
+{{- $TOCWidgetEnabled := false -}} {{- range .Site.Params.widgets.page -}} {{-
+if ne .type "toc" -}} {{ $HasWidgetNotTOC = true -}} {{- else -}} {{
+$TOCWidgetEnabled = true -}} {{- end -}} {{- end -}} {{- $TOCManuallyDisabled :=
+eq .Params.toc false -}} {{- $TOCEnabled := and (not $TOCManuallyDisabled)
+$TOCWidgetEnabled -}} {{- $hasTOC := ge (len .TableOfContents) 100 -}} {{/*
+Note: len .TableOfContents >= 100 seems like a potential typo, maybe just
+checking if > 0? Using it as is for now. */}} {{- .Scratch.Set "TOCEnabled" (and
+$TOCEnabled $hasTOC) -}} {{- .Scratch.Set "hasWidget" (or $HasWidgetNotTOC (and
+$TOCEnabled $hasTOC)) -}} {{ end }} {{/* --- main 정의 수정 --- */}} {{ define
+"main" }} {{ partial "article/article.html" . }} {{/* <<< 기존 아티클 본문 출력
+*/}} {{/* ===================================================== */}} {{/* ✨
+목록으로 돌아가기 링크 추가 ✨ */}} {{/*
+===================================================== */}} {{ with .Parent }}
+{{/* 부모 페이지가 있고, 그것이 일반 'page' 타입이 아닐 경우 (섹션 목록 등일
+경우) */}} {{ if and . (ne .Type "page") }}
+<div class="back-to-list" style="margin-top: 2rem; text-align: center">
+  {{/* 간단한 인라인 스타일 추가 */}}
+  <a href="{{ .RelPermalink }}">← {{ .Title }} 목록으로 돌아가기</a>
+</div>
+{{ end }} {{ end }} {{/* =====================================================
+*/}} {{/* ✨ 이전 글 / 다음 글 네비게이션 추가 ✨ */}} {{/*
+===================================================== */}}
+<nav
+  class="post-navigation"
+  style="
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+  "
+>
+  {{/* 간단한 인라인 스타일 추가 */}}
+  <div>
+    {{/* 이전 글 링크 (같은 섹션 내) */}} {{ with .PrevInSection }}
+    <a class="prev-post" href="{{ .Permalink }}">
+      <span style="font-size: 0.9em; color: #666">&larr; 이전 글</span>
+      <br />
+      <strong style="font-size: 1.1em">{{ .Title }}</strong>
+    </a>
+    {{ end }}
+  </div>
+  <div style="text-align: right">
+    {{/* 다음 글 링크 (같은 섹션 내) */}} {{ with .NextInSection }}
+    <a class="next-post" href="{{ .Permalink }}">
+      <span style="font-size: 0.9em; color: #666">다음 글 &rarr;</span>
+      <br />
+      <strong style="font-size: 1.1em">{{ .Title }}</strong>
+    </a>
+    {{ end }}
+  </div>
+</nav>
+
+{{/* --- 이하 기존 코드 유지 --- */}} {{ if .Params.links }} {{ partial
+"article/components/links" . }} {{ end }} {{ partial
+"article/components/related-content" . }} {{ if not (eq .Params.comments false)
+}} {{ partial "comments/include" . }} {{ end }} {{ partialCached "footer/footer"
+. }} {{ partialCached "article/components/photoswipe" . }} {{ end }} {{/* ---
+right-sidebar 정의는 그대로 유지 --- */}} {{ define "right-sidebar" }} {{ if
+.Scratch.Get "hasWidget" }}{{ partial "sidebar/right.html" (dict "Context" .
+"Scope" "page") }}{{ end}} {{ end }}
