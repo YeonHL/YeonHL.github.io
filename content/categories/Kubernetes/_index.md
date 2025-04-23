@@ -4,8 +4,6 @@ description: 컨테이너화된 애플리케이션을 자동으로 배포, 스�
 image: kubernetes-logo.png
 keywords:
   - Kubernetes
-
-# Badge style
 style:
   background: "#326CE5"
   color: "#fff"
