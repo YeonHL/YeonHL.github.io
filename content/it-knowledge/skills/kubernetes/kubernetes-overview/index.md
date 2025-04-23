@@ -1,9 +1,8 @@
 ---
-title: Kubernetes - 개요
+title: (Kubernetes) 개요
 description: 컨테이너화된 워크로드와 서비스를 관리하는 이식 및 확장 가능한 오픈소스 플랫폼으로, 선언적 구성과 자동화를 모두 지원합니다.
 date: 2025-04-22 23:14:00+0900
 lastmod: 2025-04-22
-image: 
 slug: overview
 comments: true
 math: false
@@ -12,14 +11,7 @@ tags:
 keywords:
   - Kubernetes
 ---
-[**목록으로 돌아가기**](..)
 
-> **목차**
-> - **개요**
-> - [컴포넌트](../components)
-
-
-## 소개
 ![](kubernetes-intro.svg)
 
 K8s라고도 알려진 [쿠버네티스](https://kubernetes.io/ko/docs/concepts/overview/)는 컨테이너화된 애플리케이션을 자동으로 배포, 스케일링 및 관리해주는 오픈소스 시스템입니다.
@@ -30,11 +22,11 @@ K8s라고도 알려진 [쿠버네티스](https://kubernetes.io/ko/docs/concepts
 
 애플리케이션을 구성하는 컨테이너들의 쉬운 관리 및 발견을 위해서 컨테이너들을 논리적인 단위로 그룹화합니다. 쿠버네티스는 [Google에서 15년간 프로덕션 워크로드 운영한 경험](https://queue.acm.org/detail.cfm?id=2898444)을 토대로 구축되었으며, 커뮤니티에서 제공한 최상의 아이디어와 방법들이 결합되어 있습니다.
 
-### 쿠버네티스의 기능
+## 쿠버네티스의 기능
 
 프로덕션 환경에서는 애플리케이션을 실행하는 컨테이너를 관리하고 가동 중지 시간이 없는지 확인해야 합니다. 예를 들어 컨테이너가 다운되면 다른 컨테이너를 다시 시작해야 합니다. 이 문제를 시스템에 의해 처리한다면 더 쉽지 않을까요? 이것이 쿠버네티스가 필요한 이유입니다! 쿠버네티스는 분산 시스템을 탄력적으로 실행하기 위한 프레임워크를 제공합니다. 애플리케이션의 확장과 장애 조치를 처리하고, 배포 패턴 등을 제공합니다. 예를 들어, 쿠버네티스는 시스템의 카나리아 배포를 쉽게 관리할 수 있습니다.
 
-#### 복원력
+### 복원력
 
 [**자동화된 롤아웃과 롤백**](https://kubernetes.io/ko/docs/concepts/workloads/controllers/deployment/)
 
@@ -46,7 +38,7 @@ K8s라고도 알려진 [쿠버네티스](https://kubernetes.io/ko/docs/concepts
 
 실패한 컨테이너를 재시작하고, 노드가 죽는 경우 컨테이너들을 교체하기 위해 다시 스케줄링을 하며, 사용자가 정의한 상태 체크에 응답하지 않는 컨테이너들을 종료시키며, 서비스를 제공할 준비가 완료될 때까지 해당 컨테이너를 클라이언트에 알리지 않습니다.
 
-#### 네트워크
+### 네트워크
 
 [**서비스 디스커버리와 로드 밸런싱**](https://kubernetes.io/ko/docs/concepts/services-networking/service/)
 
@@ -56,7 +48,7 @@ K8s라고도 알려진 [쿠버네티스](https://kubernetes.io/ko/docs/concepts
 
 파드와 서비스에 IPv4와 IPv6 주소를 할당할 수 있습니다.
 
-#### 리소스
+### 리소스
 
 [**자동 빈 패킹(bin packing)**](https://kubernetes.io/ko/docs/concepts/configuration/manage-resources-containers/)
 
@@ -68,7 +60,7 @@ K8s라고도 알려진 [쿠버네티스](https://kubernetes.io/ko/docs/concepts
 
 간단한 명령어나 UI를 통해서 또는 CPU 사용량에 따라 자동으로 애플리케이션의 스케일을 업 또는 다운합니다.
 
-#### 관리
+### 관리
 
 [**스토리지 오케스트레이션**](https://kubernetes.io/ko/docs/concepts/storage/persistent-volumes/)
 
@@ -88,7 +80,7 @@ K8s라고도 알려진 [쿠버네티스](https://kubernetes.io/ko/docs/concepts
 
 쿠버네티스 업스트림 소스 코드 수정 없이 쿠버네티스 클러스터에 기능을 추가할 수 있습니다.
 
-### 쿠버네티스의 철학
+## 쿠버네티스의 철학
 
 쿠버네티스는 전통적인, 모든 것이 포함된 Platform as a Service(PaaS)가 아닙니다. 쿠버네티스는 하드웨어 수준보다는 <span style="background:#fff88f">컨테이너 수준에서 운영</span>되기 때문에, PaaS가 일반적으로 제공하는 배포, 스케일링, 로드 밸런싱과 같은 기능을 제공하며, 사용자가 로깅, 모니터링 및 알림 솔루션을 통합할 수 있습니다. 하지만, 쿠버네티스는 모놀리식(monolithic)이 아니어서, 이런 기본 솔루션이 선택적이며 추가나 제거가 용이합니다. 쿠버네티스는 개발자 플랫폼을 만드는 구성 요소를 제공하지만, 필요한 경우 사용자의 선택권과 유연성을 지켜줍니다.
 
@@ -103,7 +95,7 @@ K8s라고도 알려진 [쿠버네티스](https://kubernetes.io/ko/docs/concepts
 
 위의 기능 중 이전에 쿠버네티스에서 사용한 기능이 있다면, 이는 쿠버네티스 자체 기능이 아닌 별도로 추가한 솔루션입니다.
 
-### 쿠버네티스의 필요성
+## 쿠버네티스의 필요성
 
 ![배포 혁명](kubernetes-container-revolution.svg)
 

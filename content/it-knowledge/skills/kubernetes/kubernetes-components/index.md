@@ -1,9 +1,8 @@
 ---
-title: Kubernetes - 컴포넌트
+title: (Kubernetes) 컴포넌트
 description: 쿠버네티스 클러스터는 컴퓨터 집합인 노드 컴포넌트와 컨트롤 플레인 컴포넌트로 구성됩니다.
 date: 2025-04-23 00:39:00+0900
 lastmod: 2025-04-23
-image: 
 slug: components
 comments: true
 math: false
@@ -12,13 +11,6 @@ tags:
 keywords:
   - Kubernetes
 ---
-[**목록으로 돌아가기**](..)
-
-> **목차**
-> - [개요](../overview)
-> - **컴포넌트**
-
-
 
 쿠버네티스를 배포하면 클러스터를 얻습니다. 쿠버네티스 클러스터는 <u>컴퓨터 집합인 노드 컴포넌트와 컨트롤 플레인 컴포넌트로 구성</u>됩니다.
 
