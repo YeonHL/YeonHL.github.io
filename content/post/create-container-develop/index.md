@@ -1,8 +1,8 @@
 ---
 title: 컨테이너 개발 환경 만들기
-description: Linux 환경에 Podman 기반 컨테이너 개발 환경 만들기
+description: Linux 서버와 Windows 클라이언트 PC에 Podman 기반 컨테이너 개발 환경 만들기
 date: 2025-04-25 02:03:00+0900
-lastmod: 2025-04-25
+lastmod: 2025-04-26
 slug: create-container-development-environment
 comments: true
 math: false
@@ -11,13 +11,14 @@ categories:
 tags:
   - Podman
   - Kubernetes
+  - DevOps
 keywords:
   - Container
   - Podman
   - Kubernetes
 ---
 
-Linux에 컨테이너 개발 환경을 구축하기 위한 과정입니다. 먼저 어떤 컨테이너 개발 도구를 사용할지 고믾했습
+Linux 서버와 Windows 클라이언트 PC에 컨테이너 개발 환경을 구축한 과정입니다. 구축 전, 어떤 컨테이너 개발 도구를 사용할지 고민했습니다.
 
 ## Docker vs Podman
 
@@ -84,16 +85,105 @@ Docker의 관리 기능은 분명 강력하지만, 제가 컨테이너를 배포
 > 만약 Kubernetes 없이 컨테이너만 배포하여 운영 환경을 구축해야 한다면 Docker를 사용할 것입니다. 이 경우에도 Docker와의 호환성을 제공하므로 전환하기 쉬울 것입니다.
 
 ## 구축 과정
-(작성 중)
+
+### 서버에 Podman 설치
+
+Podman을 설치할 서버는 Ubuntu 24.04 입니다. 아래 명령어로 Podman을 설치합니다:
+
+```bash
+sudo apt-get update
+sudo apt-get -y install podman
+```
+
+루트리스 권한을 위해 `/etc/subuid`와 `/etc/subgid`에 현재 사용자, 그룹의 UID가 작성되어 있는지 확인합니다. 없을 경우 추가해주세요.
+
+```sh
+# cat /etc/subuid
+yeonhl:100000:65536
+test:165536:65536
+```
+
+설치 후 아래 명령어로 올바르게 설치됐는지 확인할 수 있습니다:
+
+```shell
+podman run --name basic_httpd -dt -p 8080:80/tcp docker.io/nginx
+```
+
+결과를 CLI로 확인할 경우 `ps` 명령어를 사용하세요:
+
+```
+podman ps
+```
+
+### Podman Desktop 설치
+
+Docker Desktop의 경우 개인 사용자만 무료로 사용할 수 있습니다. 하지만 Podman Desktop은 Apache-2.0 라이센스를 따르므로 업무용으로도 사용할 수 있습니다. 모니터링 목적으로 Podman Desktop 설정도 함께 진행했습니다.
+
+> 다운로드 링크: [Podman Desktop - Containers and Kubernetes | Podman Desktop](https://podman-desktop.io/)
+
+설치 후 Windows 기준으로는 WSL 환경을 생성하여 Podman 환경을 구축하여 사용합니다.
+
+#### (Optional) 서버 연결 설정
+
+이 설정은 SSH 데몬을 요구합니다. Linux 머신에 SSH 데몬 설치 후 아래 명령어로 활성화해주세요:
+
+```sh
+sudo systemctl enable --now sshd
+```
+
+Linux 서버에서 사용자 권한으로 아래 명령어를 실행합니다.
+(아래 명령어는 Root나 `sudo`로 실행하지 마세요):
+
+```bash
+systemctl --user enable --now podman.socket
+```
+
+결과:
+
+```
+Created symlink /home/yeonhl/.config/systemd/user/sockets.target.wants/podman.socket → /usr/lib/systemd/user/podman.socket.
+```
+
+이후 사용자가 로그인하지 않았을 때도 소켓이 작동하도록 이 사용자에 대한 linger를 활성화합니다:
+
+```bash
+sudo loginctl enable-linger $USER
+```
+
+아래 명령어로 소켓이 수신 대기 중인지 확인할 수 있습니다.
+
+```bash
+podman --remote info
+```
+
+```
+host:
+  arch: amd64
+  buildahVersion: 1.16.0-dev
+  cgroupVersion: v2
+  conmon:
+	package: conmon-2.0.19-1.fc32.x86_64
+```
+
+하지만 아래의 오류가 발생하여 적용하지 않았습니다.
+
+##### 오류: `Error: unable to connect to Podman socket: server API version is too old. Client "4.0.0" server "3.4.4"`
+
+서버 환경인 Ubuntu 22.04의 공식 패키지 저장소에는 Podman을 3.4.4 버전까지만 지원합니다. 이후 버전 설치를 위해서는 외부 저장소를 연결하거나, 소스를 빌드해야 합니다.
+
+직접 소스 빌드하는 것은 의존성 충돌 및 업데이트 유지보수 등의 문제가 우려되기에, 시도하지 않았습니다. 이외에 외부 저장소를 연결하거나, `brew`를 사용하면 설치는 가능하지만, Podman 설치의 안정성을 보장할 수 없어 공식 문서에서도 권장하지 않습니다. `systemd`와의 통합이 어려우며 Brew의 qemu 가상화 계층 구조로 인해 성능 저하가 발생합니다.
+
+위의 문제가 우려되는 현재 환경에서 굳이 Podman Desktop과 직접 연결하는 것은 좋지 않다고 판단했습니다. Podman Desktop은 로컬 PC에서 WSL 환경으로 사용하고, CI/CD를 구축하여 서버에 배포 후 테스트하는 쪽으로 시도하기로 했습니다.
 
 ## 다음 목표
-(작성 중)
 
-
-
+개발 환경을 마저 구축하기 위해선 먼저 CI/CD 환경이 필요할 것으로 생각했습니다. 하지만 그전에 Kubernetes 환경을 먼저 구축할 계획입니다.
 
 > **참조**
+>
 > - [Podman이란 무엇입니까? - Red Hat](https://www.redhat.com/en/topics/containers/what-is-podman)
 > - [Podman과 Docker의 3가지 장점 | Red Hat 개발자](https://developers.redhat.com/articles/2023/08/03/3-advantages-docker-podman#_3__better_tools_and_extensions)
 > - [전체 Podman 대 Docker 분석: 기능, 성능 및 보안 | Uptrace](https://uptrace.dev/comparisons/podman-vs-docker)
 > - [Podman 공식 문서](https://podman.io/docs/installation)
+> - [Is there a way to install the latest version of podman on Debian/Ubuntu/Linux Mint? : r/podman](https://www.reddit.com/r/podman/comments/1cbhylt/is_there_a_way_to_install_the_latest_version_of/?rdt=34462)
+> - [Podman version 5.3.2 is brocken, probably because of gvproxy dependency · Homebrew · Discussion #5901](https://github.com/orgs/Homebrew/discussions/5901)
