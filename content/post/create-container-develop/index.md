@@ -88,7 +88,7 @@ Docker의 관리 기능은 분명 강력하지만, 제가 컨테이너를 배포
 
 ### 서버에 Podman 설치
 
-Podman을 설치할 서버는 Ubuntu 24.04 입니다. 아래 명령어로 Podman을 설치합니다:
+Podman을 설치할 서버는 Ubuntu 22.04 입니다. 아래 명령어로 Podman을 설치합니다:
 
 ```bash
 sudo apt-get update
