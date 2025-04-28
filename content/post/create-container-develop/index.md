@@ -2,7 +2,7 @@
 title: 컨테이너 개발 환경 만들기
 description: Linux 서버와 Windows 클라이언트 PC에 Podman 기반 컨테이너 개발 환경 만들기
 date: 2025-04-25 02:03:00+0900
-lastmod: 2025-04-26
+lastmod: 2025-04-28
 slug: create-container-development-environment
 comments: true
 math: false
@@ -43,9 +43,9 @@ Docker 대신 Podman을 선택해야 할 이유가 있을까요? 둘의 특징�
 
 Docker는 중앙 집중식 데몬(dockerd)에 의존하는 반면, Podman은 데몬리스 아키텍처를 채택했습니다. 이것은 매우 중요한 차이점으로, 여러 장점을 가져옵니다:
 
-- **향상된 보안**: 데몬이 없으므로 루트 권한으로 실행되는 중앙 프로세스가 없어 공격 표면이 감소합니다. 컨테이너가 격리된 개별 프로세스로 실행됩니다.
+- **향상된 보안**: 데몬이 없으므로 루트 권한으로 실행되는 중앙 프로세스가 없어 <u>공격 표면이 감소</u>합니다. 컨테이너가 격리된 개별 프로세스로 실행됩니다.
 - **자원 효율성**: 항상 실행 중인 백그라운드 데몬이 없어 <u>시스템 리소스 사용이 줄어듭니다.</u>
-- **안정성 향상**: 중앙 데몬에 발생한 문제가 모든 컨테이너에 영향을 미치는 단일 장애점이 제거됩니다.
+- **안정성 향상**: 중앙 데몬에 발생한 문제가 모든 컨테이너에 영향을 미치는 <u>단일 장애점이 제거</u>됩니다.
 
 물론 데몬이 없기에 발생하는 단점도 존재합니다.
 
@@ -59,7 +59,7 @@ Docker는 중앙 집중식 데몬(dockerd)에 의존하는 반면, Podman은 데
 
 - **백그라운드 서비스/자동 재시작 기능 한계**: 데몬 기반 Docker는 컨테이너의 자동 재시작 정책 등 백그라운드 서비스 관리에 강점을 가집니다. Podman은 systemd와의 연동을 통해 이 문제를 보완하지만, Docker만큼 직관적이거나 일관된 경험을 제공하지는 않습니다.
 
-이러한 장단점은 두 도구의 목적에 따른 차이입니다. Docker는 Kubernetes와 함께 사용하기 위한 목적으로 등장한 도구가 아니기에, 단독으로 사용할 때는 Podman보다 강력한 관리 기능을 제공합니다. 하지만 Podman은 Kubernetes와 통합이 용이합니다. Kubernetes와 함께 사용할 경우 위 단점은 해소됩니다.
+이러한 장단점은 두 도구의 목적에 따른 차이입니다. Docker는 Kubernetes와 함께 사용하기 위한 목적으로 등장한 도구가 아니기에, 단독으로 사용할 때는 Podman보다 강력한 관리 기능을 제공합니다. 하지만 Podman은 Kubernetes와 통합이 용이합니다. <span style="background:#fff88f">Kubernetes와 함께 사용할 경우 위 단점은 해소</span>됩니다.
 
 > Podman이 Kubernetes 컨테이너 런타임으로는 사용되지 않습니다. 하지만 CRI-O나 containerd를 개발 도구로 직접 사용하는 것은 크게 불편하기에 Docker나 Podman을 개발 도구로 사용합니다.
 
@@ -68,19 +68,19 @@ Docker는 중앙 집중식 데몬(dockerd)에 의존하는 반면, Podman은 데
 Podman의 명령 구조와 기능은 Kubernetes와 더 일관성 있게 설계되었습니다:
 
 - **Pod 개념 기본 지원**: Podman은 이름에서 알 수 있듯이 pod 개념을 기본적으로 지원하므로 Kubernetes의 pod와 유사한 방식으로 컨테이너 그룹을 관리할 수 있습니다.
-- **학습 곡선 감소**: 개발자가 로컬에서 Podman을 사용하여 개발한 후 Kubernetes로 이동할 때 개념적 일관성이 있어 전환이 수월합니다.
-- **Kubernetes와의 연동**: Podman은 현재 Podman 환경의 컨테이너/Pod를 Kubernetes YAML(manifest)로 바로 변환할 수 있어, 개발-운영 환경 전환이 쉽고 일관성이 높습니다.
+- **학습 곡선 감소**: 개발자가 로컬에서 Podman을 사용하여 개발한 후 Kubernetes로 이동할 때 <u>개념적 일관성</u>이 있어 전환이 수월합니다.
+- **Kubernetes와의 연동**: Podman은 현재 Podman 환경의 컨테이너/Pod를 <u>Kubernetes YAML(manifest)로 바로 변환</u>할 수 있어, 개발-운영 환경 전환이 쉽고 일관성이 높습니다.
 
 ### 호환성과 대체 가능성
 
-기존에 Docker를 사용했더라도 호환성을 제공합니다:
+기존에 Docker를 사용했더라도 <u>호환성을 제공</u>합니다:
 
 - **Docker 호환 API**: Podman은 Docker CLI와 호환되는 명령어를 제공하므로 기존 Docker 스크립트와 워크플로우를 거의 수정 없이 사용할 수 있습니다.
 - **Docker 컨테이너 이미지 지원**: Docker로 생성된 이미지를 Podman에서도 사용할 수 있어 기존 자산을 계속 활용할 수 있습니다.
 
 ### 선택한 컨테이너 개발 도구: Podman
 
-Docker의 관리 기능은 분명 강력하지만, 제가 컨테이너를 배포하려는 환경은 Kubernetes입니다. Docker를 사용 못할 이유는 없지만, Podman을 사용했을 때 얻을 수 있는 장점이 더 많다고 판단하여 Podman을 선택했습니다.
+Docker의 관리 기능은 분명 강력하지만, <span style="background:#fff88f">제가 컨테이너를 배포하려는 환경은 Kubernetes</span>입니다. Docker를 사용 못할 이유는 없지만, Podman을 사용했을 때 얻을 수 있는 장점이 더 많다고 판단하여 Podman을 선택했습니다.
 
 > 만약 Kubernetes 없이 컨테이너만 배포하여 운영 환경을 구축해야 한다면 Docker를 사용할 것입니다. 이 경우에도 Docker와의 호환성을 제공하므로 전환하기 쉬울 것입니다.
 
@@ -117,11 +117,46 @@ podman ps
 
 ### Podman Desktop 설치
 
-Docker Desktop의 경우 개인 사용자만 무료로 사용할 수 있습니다. 하지만 Podman Desktop은 Apache-2.0 라이센스를 따르므로 업무용으로도 사용할 수 있습니다. 모니터링 목적으로 Podman Desktop 설정도 함께 진행했습니다.
+Docker Desktop의 경우 개인 사용자만 무료로 사용할 수 있습니다. 하지만 Podman Desktop은 Apache-2.0 라이센스를 따르므로 업무용으로도 사용할 수 있습니다.
 
 > 다운로드 링크: [Podman Desktop - Containers and Kubernetes | Podman Desktop](https://podman-desktop.io/)
 
 설치 후 Windows 기준으로는 WSL 환경을 생성하여 Podman 환경을 구축하여 사용합니다.
+
+#### 오류: `failed to verify certificate: x509: certificate signed by unknown authority`
+
+회사 등 보안 정책이 적용된 PC의 경우 인증서를 설치하지 않으면 가상 머신에서 외부에 접근할 때 오류가 발생할 수 있습니다.
+예를 들어 아래 명령어를 실행했을 때:
+
+```sh
+podman run quay.io/podman/hello
+```
+
+다음의 오류가 발생합니다:
+
+```
+Error: initializing source docker://quay.io/podman/hello:latest: pinging container registry quay.io: Get "https://quay.io/v2/": tls: failed to verify certificate: x509: certificate signed by unknown authority
+```
+
+이 경우 보안 정책에 맞는 인증서를 설치해야 합니다. 가상 머신에서 `sudo su`로 Root 계정 접속 후 `/etc/pki/ca-trust/source/anchors` 경로로 이동합니다.
+
+```sh
+cd /etc/pki/ca-trust/source/anchors
+```
+
+그 다음 `curl` 등 원하는 도구를 사용하여 가상 머신에 인증서 파일을 추가합니다. 예제에서는 `.pem` 확장자 파일을 추가했지만 제 경우 `.crt` 파일을 아래와 같이 다운로드 했습니다:
+
+```sh
+curl -k -o some-certificate.crt https://MY-SERVER.COM/SOME-CERTIFICATE.pem
+```
+
+이후 인증서를 신뢰할 수 있는 CA 목록에 추가합니다:
+
+```sh
+update-ca-trust
+```
+
+이후 터미널을 재시작하거나 Podman 머신을 재시작하여 올바르게 적용됐는지 확인합니다.
 
 #### (Optional) 서버 연결 설정
 
@@ -169,15 +204,15 @@ host:
 
 ##### 오류: `Error: unable to connect to Podman socket: server API version is too old. Client "4.0.0" server "3.4.4"`
 
-서버 환경인 Ubuntu 22.04의 공식 패키지 저장소에는 Podman을 3.4.4 버전까지만 지원합니다. 이후 버전 설치를 위해서는 외부 저장소를 연결하거나, 소스를 빌드해야 합니다.
+서버 환경인 <u>Ubuntu 22.04의 공식 패키지 저장소에는 Podman을 3.4.4 버전까지만 지원</u>합니다. 이후 버전 설치를 위해서는 외부 저장소를 연결하거나, 소스를 빌드해야 합니다.
 
 직접 소스 빌드하는 것은 의존성 충돌 및 업데이트 유지보수 등의 문제가 우려되기에, 시도하지 않았습니다. 이외에 외부 저장소를 연결하거나, `brew`를 사용하면 설치는 가능하지만, Podman 설치의 안정성을 보장할 수 없어 공식 문서에서도 권장하지 않습니다. `systemd`와의 통합이 어려우며 Brew의 qemu 가상화 계층 구조로 인해 성능 저하가 발생합니다.
 
-위의 문제가 우려되는 현재 환경에서 굳이 Podman Desktop과 직접 연결하는 것은 좋지 않다고 판단했습니다. Podman Desktop은 로컬 PC에서 WSL 환경으로 사용하고, CI/CD를 구축하여 서버에 배포 후 테스트하는 쪽으로 시도하기로 했습니다.
+위의 문제가 우려되는 현재 환경에서 굳이 Podman Desktop과 직접 연결하는 것은 좋지 않다고 판단했습니다. 로컬 환경을 구축한다면 Podman Desktop은 로컬 PC에서 WSL 환경으로 사용하고, CI/CD를 구축하여 서버에 배포 후 테스트하는 쪽으로 시도하기로 했습니다. CI/CD 구축 전에는 GPU가 필요할 경우 개발 서버에서 직접 구현하여 빌드 후 테스트 예정입니다.
 
 ## 다음 목표
 
-개발 환경을 마저 구축하기 위해선 먼저 CI/CD 환경이 필요할 것으로 생각했습니다. 하지만 그전에 Kubernetes 환경을 먼저 구축할 계획입니다.
+로컬 개발 환경을 마저 구축하기 위해선 먼저 CI/CD 환경이 필요할 것으로 생각했습니다. 하지만 아직 Kubernetes 환경이 없기에 먼저 구축할 계획입니다.
 
 > **참조**
 >
