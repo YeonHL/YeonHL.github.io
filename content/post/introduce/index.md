@@ -6,11 +6,6 @@ lastmod: 2025-04-22
 slug: introduce
 comments: true
 weight: 1
-links:
-  - title: YeonHL/Docs-software
-    description: 2025년 4월까지 작성했던 소프트웨어 문서 저장소입니다.
-    website: https://github.com/YeonHL/Docs-software
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
 menu:
   main:
     name: 소개
@@ -19,8 +14,6 @@ menu:
     params:
       icon: book
 ---
-
-저는 개인 지식 저장 목적으로 공부한 지식을 기록하고 있습니다. 하단에 Github 저장소 링크를 공유했습니다.
 
 {{< resizeimg src="obsidian-graph.png" width="800" caption="작성한 기록의 [Obsidian](https://obsidian.md/) 그래프" class="shadow-lg" >}}
 

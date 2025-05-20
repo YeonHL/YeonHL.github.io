@@ -10,12 +10,9 @@ categories:
   - Container
 tags:
   - Podman
-  - Kubernetes
-  - DevOps
 keywords:
   - Container
   - Podman
-  - Kubernetes
 ---
 
 Linux 서버와 Windows 클라이언트 PC에 컨테이너 개발 환경을 구축한 과정입니다. 구축 전, 어떤 컨테이너 개발 도구를 사용할지 고민했습니다.
