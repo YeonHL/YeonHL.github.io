@@ -2,7 +2,7 @@
 title: 파이썬 프로젝트 시작하기
 description: 파이썬 프로젝트를 시작하면서 의존성 추가 등 환경을 설정하는 과정
 date: 2025-05-02 22:19:00+0900
-lastmod: 2025-05-03
+lastmod: 2025-05-22
 slug: setting-python-project
 comments: true
 math: false
@@ -19,8 +19,10 @@ keywords:
   - ruff
   - pre-commit
 ---
+> **수정 내용**
+> - **2025-05-22**: `pre-commit`에 `uv-export` hook 추가
 
-파이썬 프로젝트 환경을 설정하면서 적용했던 도구들과 그 이유에 대해 작성했습니다.
+파이썬 프로젝트 환경을 설정하면서, 의존성 관리 및 코드 품질 개선을 위해 아래의 도구들을 적용했습니다.
 
 ## 프로젝트 관리 도구
 
@@ -245,6 +247,16 @@ Ruff에서는 `F` 규칙과 일부 `E` 규칙을 기본 설정으로 가집니�
 `.pre-commit-config.yaml`
 
 ```yaml
+# uv
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.7.6
+    hooks:
+      - id: uv-export
+        args:
+          - --no-dev
+          - --format=requirements.txt
+          - --output-file=requirements.txt
+
 # Ruff
 - repo: https://github.com/astral-sh/ruff-pre-commit
   rev: v0.11.8
