@@ -4,7 +4,7 @@ date: 2025-07-04
 slug: systems
 menu:
   main:
-    name: 시스템 (Systems)
+    name: 시스템
     identifier: systems
     weight: 2
     params:
