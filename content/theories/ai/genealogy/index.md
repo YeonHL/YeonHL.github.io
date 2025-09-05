@@ -7,7 +7,7 @@ slug: genealogy
 comments: true
 math: false
 categories:
-  - Systems
+  - Theories
 tags:
   - AI
 keywords:
