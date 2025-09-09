@@ -1,0 +1,25 @@
+views:
+  - type: table
+    name: 표
+    filters:
+      and:
+        - file.path.startsWith("YeonHL.github.io/content")
+        - file.name != "_index"
+        - '!file.folder.startsWith("YeonHL.github.io/content/page")'
+    order:
+      - file.name
+      - title
+      - file.folder
+      - categories
+      - tags
+      - keywords
+      - date
+      - lastmod
+      - file.ctime
+      - file.mtime
+    sort: []
+    columnSize:
+      note.title: 164
+      file.folder: 404
+      note.date: 192
+      note.lastmod: 111
