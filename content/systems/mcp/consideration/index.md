@@ -10,11 +10,8 @@ categories:
   - Systems
 tags:
   - MCP
-  - LLM
 keywords:
   - MCP
-  - Agents
-  - LLM
 ---
 
 ## 개요
