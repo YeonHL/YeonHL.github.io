@@ -1,6 +1,6 @@
 ---
 title: MCP 아키텍처
-description: MCP의 구성 요소를 자세히 보면서 권장되는 아키텍처를 살펴보겠습니다.
+description: MCP의 아키텍처 및 통신 과정을 이해하면서 내부 동작과 철학을 살펴보겠습니다.
 date: 2025-08-14T19:03:00
 lastmod: 2025-09-16
 slug: architecture
