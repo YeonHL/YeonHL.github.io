@@ -1,13 +1,7 @@
 # Hugo 사이트를 Pages에 배포하는 샘플 워크플로우
-name: Deploy Hugo site to Pages
+name: Deploy to Github Pages
 
 on:
-  # 기본 브랜치를 대상으로 하는 푸시에서 실행
-  push:
-    branches:
-      - main
-
-  # Actions 탭에서 수동으로 실행 가능
   workflow_dispatch:
 
 # GitHub Pages 배포를 위해 GITHUB_TOKEN 권한 설정
